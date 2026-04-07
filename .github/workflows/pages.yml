@@ -3,7 +3,7 @@ name: Deploy presentation to GitHub Pages
 on:
   push:
     branches: [master]
-    paths: [presentation.md]
+    paths: [presentation.md, demos/**]
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,9 @@ jobs:
         with:
           node-version: 20
 
-      - run: npx @marp-team/marp-cli --html presentation.md --allow-local-files -o dist/index.html
+      - run: |
+          npx @marp-team/marp-cli --html presentation.md --allow-local-files -o dist/index.html
+          cp -r demos dist/demos
 
       - uses: actions/upload-pages-artifact@v3
         with:
