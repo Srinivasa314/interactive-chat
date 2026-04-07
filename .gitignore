@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.swp
+.DS_Store
+.playwright-mcp/
+test-results/
+default.profraw
+presentation.html
+presentation.pdf
+.claude/settings.local.json
+e2e/uat/screenshots/

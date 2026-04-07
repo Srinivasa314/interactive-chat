@@ -1,0 +1,17 @@
+{
+  "name": "interactive-chat",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "build": "pnpm -r build",
+    "test": "pnpm --filter backend test",
+    "test:e2e": "playwright test",
+    "slides": "marp --html presentation.md --allow-local-files -p",
+    "slides:pdf": "marp --html presentation.md --allow-local-files -o presentation.pdf",
+    "slides:html": "marp --html presentation.md --allow-local-files -o presentation.html"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.3.1",
+    "@playwright/test": "^1.58.2"
+  }
+}
